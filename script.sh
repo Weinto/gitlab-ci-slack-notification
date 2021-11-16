@@ -35,7 +35,7 @@ function print_slack_summary() {
 
     # Create slack message body
 
-    slack_msg_body="<https://REPO_URL|PLACEHOLDER> with job <https://REPO_URL/-/jobs/${CI_JOB_ID}|${CI_JOB_ID}> by ${GITLAB_USER_NAME} \n<https://REPO_URL/commit/$(git rev-parse HEAD)|$(git rev-parse --short HEAD)>\ - ${CI_COMMIT_REF_NAME} "
+    slack_msg_body="<https://REPO_URL|PLACEHOLDER> with job <https://REPO_URL/-/jobs/${CI_JOB_ID}|${CI_JOB_ID}> by ${GITLAB_USER_NAME} \n<https://REPO_URL/commit/$(git rev-parse HEAD)|$(git rev-parse --short HEAD)>\n - ${CI_COMMIT_REF_NAME} "
     
     cat <<-SLACK
             {
